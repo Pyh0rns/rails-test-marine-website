@@ -1,0 +1,27 @@
+<div class="banner_small mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @formation.url %>);">
+  <div class="container">
+    <h1><%= @formation.titre %></h1>
+    <p>Description</p>
+    <%= link_to 'Retour aux formations', formations_path, class: "link_to btn btn-success" %>
+  </div>
+</div>
+
+
+
+
+<div class="container" style="height: 300px;">
+<%# retirer height quand vrai contenu %>
+
+  <h2><%= @formation.titre %></h2>
+
+  <p class="mt-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+  Fuga odit autem fugiat molestiae, quo consectetur delectus numquam at nesciunt quibusdam id quam ipsam eligendi,
+  non aut natus dolor dignissimos molestias!</p>
+
+  <p>a faire plus tard : laisser un avis</p>
+
+  <%= link_to 'Supprimer cette formation', formation_path(@formation), class: "link_to btn btn-danger",
+  method: :delete, data: { confirm: "Are you sure?" } %>
+
+  <%= link_to 'Mettre à jour cette formation', edit_formation_path(@formation), class: "link_to btn btn-primary" %>
+</div>
